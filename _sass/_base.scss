@@ -737,14 +737,16 @@ footer.sticky-bottom {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     text-align: right;
+
+    font-size: 1.3rem;
   }
 
   ol.bibliography {
     list-style: none;
     padding: 0;
-    margin-top: 0;
+    margin-top: -2.8rem;
 
     li {
       margin-bottom: 1rem;
@@ -760,6 +762,8 @@ footer.sticky-bottom {
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
           color: var(--global-card-bg-color) !important;
+
+          font-size: 0.8rem;      /* 字号改小 */
 
           a {
             color: white;
@@ -926,7 +930,6 @@ pre {
     border-radius: 0;
     margin-bottom: 0;
     padding: 0;
-    white-space: inherit;
   }
 }
 
