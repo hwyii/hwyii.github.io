@@ -15,7 +15,7 @@ nav_order: 3
 </style>
 
 <div class="publications">
-{% bibliography -f others %}
+  {% bibliography -f others %}
 </div>
 
 <h3 style="margin-top: 55px; margin-bottom: 0px;">Professional Service</h3>
