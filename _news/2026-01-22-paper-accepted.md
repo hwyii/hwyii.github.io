@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper [Impact of Positional Encoding: Clean and Adversarial Rademacher Complexity for Transformers under In-Context Regression](https://arxiv.org/abs/2512.09275) is accepted to **AISTATS**!
+Our paper [Impact of Positional Encoding: Clean and Adversarial Rademacher Complexity for Transformers under In-Context Regression](https://arxiv.org/abs/2512.09275) is accepted to **AISTATS 2026**!
