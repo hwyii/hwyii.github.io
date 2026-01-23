@@ -28,10 +28,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-our-paper-unveiling-privacy-risks-in-llm-agent-memory-is-accepted-to-acl",
-          title: 'Our paper Unveiling privacy risks in llm agent memory is accepted to ACL!...',
+            },},{id: "news-our-paper-unveiling-privacy-risks-in-llm-agent-memory-is-accepted-to-acl-2025",
+          title: 'Our paper Unveiling privacy risks in llm agent memory is accepted to ACL...',
           description: "",
-          section: "News",},{id: "news-our-paper-impact-of-positional-encoding-clean-and-adversarial-rademacher-complexity-for-transformers-under-in-context-regression-is-accepted-to-aistats",
+          section: "News",},{id: "news-our-paper-impact-of-positional-encoding-clean-and-adversarial-rademacher-complexity-for-transformers-under-in-context-regression-is-accepted-to-aistats-2026",
           title: 'Our paper Impact of Positional Encoding: Clean and Adversarial Rademacher Complexity for Transformers...',
           description: "",
           section: "News",},{id: "projects-project-1",
