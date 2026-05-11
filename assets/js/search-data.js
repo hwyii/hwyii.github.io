@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-other",
           title: "Other",
-          description: "My side projects, academic talks, and professional services.",
+          description: "Side projects, presentations, and professional service.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/other/";
@@ -33,6 +33,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-one-paper-is-accepted-to-aistats-2026",
           title: 'One paper is accepted to AISTATS 2026!',
+          description: "",
+          section: "News",},{id: "news-i-will-present-a-poster-at-aistats-2026-in-tangier-morocco",
+          title: 'I will present a poster at AISTATS 2026 in Tangier, Morocco.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
