@@ -2,7 +2,7 @@
 layout: page
 title: Other
 permalink: /other/
-description: Side projects, presentations, and professional service.
+description: Side projects, work experience, presentations, and professional service.
 nav: true
 nav_order: 3
 ---
@@ -17,6 +17,14 @@ nav_order: 3
 
 <div class="publications">
   {% bibliography -f others %}
+</div>
+
+<h3 style="margin-top: 55px; margin-bottom: 0;">Work Experience</h3>
+
+<div class="publications">
+  <ul style="margin-top: 0;">
+    <li><strong>Amazon</strong>, Applied Scientist Intern, Arlington, VA, Jun. 2026 - Aug. 2026</li>
+  </ul>
 </div>
 
 <h3 style="margin-top: 55px; margin-bottom: 0;">Presentations</h3>
