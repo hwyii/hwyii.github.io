@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I will present a poster at **AISTATS 2026** in Tangier, Morocco.
+I will present a poster at **AISTATS 2026** in Tangier, Morocco!
