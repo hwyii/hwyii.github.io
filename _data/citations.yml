@@ -1,11 +1,15 @@
 metadata:
-  last_updated: '2026-05-18'
+  last_updated: '2026-06-26'
 papers:
   pqlhnyAAAAAJ:9yKSN-GCB0IC:
-    citations: 74
+    citations: 92
     title: Unveiling privacy risks in llm agent memory
     year: '2025'
   pqlhnyAAAAAJ:UeHWp8X0CEIC:
-    citations: 0
+    citations: 1
     title: 'Impact of Positional Encoding: Clean and Adversarial Rademacher Complexity for Transformers under In-Context Regression'
-    year: '2025'
+    year: '2026'
+  pqlhnyAAAAAJ:zYLM7Y9cAGgC:
+    citations: 0
+    title: 'AURA: Adaptive Uncertainty-aware Refinement for LLM-as-a-Judge Auditing'
+    year: '2026'
