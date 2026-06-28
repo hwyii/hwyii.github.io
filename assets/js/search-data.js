@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-radar",
+          title: "Radar",
+          description: "Recent papers selected around my current research interests.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/radar/";
+          },
         },{id: "nav-other",
           title: "Other",
           description: "Side projects, work experience, presentations, and professional service.",
