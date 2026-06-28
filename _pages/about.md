@@ -41,4 +41,4 @@ I use [Dawnlit](https://hwyii.github.io/dawnlit/) to track recent work around my
    description="Papers selected around trustworthy LLMs, efficient adversarial training, data selection, loss landscapes, and on-policy distillation."
 %}
 
-*\*Bold indicates first or co-first authorship.*
+_\*Bold indicates first or co-first authorship._
