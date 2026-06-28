@@ -4,7 +4,7 @@ title: Other
 permalink: /other/
 description: Side projects, work experience, presentations, and professional service.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 <style>
