@@ -31,4 +31,14 @@ Hello! I'm **Weiyi He**, a second-year Ph.D. student at [Michigan State Universi
 
 My research focuses on **Trustworthy AI**, **Adversarial Training**, **AI Safety**, and **statistical theory for Large Language Models (LLMs)**. I am dedicated to understanding the theoretical foundations of modern AI systems to enhance their reliability and security.
 
+## Research radar
+
+I use [Dawnlit](https://hwyii.github.io/dawnlit/) to track recent work around my current research interests. The feed is generated daily from an explicit, editable research profile.
+
+{% include paper-radar.liquid
+   limit=3
+   heading="Recent signals"
+   description="Papers selected around trustworthy LLMs, efficient adversarial training, data selection, loss landscapes, and on-policy distillation."
+%}
+
 *\*Bold indicates first or co-first authorship.*
