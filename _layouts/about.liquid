@@ -65,6 +65,8 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    {% include visitor-map.liquid map=page.visitor_map %}
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">

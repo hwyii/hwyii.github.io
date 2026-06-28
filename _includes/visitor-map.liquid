@@ -1,0 +1,53 @@
+{% assign visitor_map = include.map %}
+{% if visitor_map.enabled and visitor_map.image_url %}
+  <section class="visitor-map-section" aria-labelledby="visitor-map-title">
+    <h2 id="visitor-map-title">Visitors</h2>
+    <div id="visitor-map" style="text-align: center"></div>
+  </section>
+
+  <script>
+    (() => {
+      const storageKey = 'hwyii.visitor-map.opt-out';
+      const query = new URLSearchParams(window.location.search);
+      const trackingPreference = query.get('visitor_tracking');
+
+      if (trackingPreference === 'off') {
+        localStorage.setItem(storageKey, '1');
+      } else if (trackingPreference === 'on') {
+        localStorage.removeItem(storageKey);
+      }
+
+      if (trackingPreference) {
+        query.delete('visitor_tracking');
+        const cleanQuery = query.toString();
+        history.replaceState(
+          null,
+          '',
+          `${window.location.pathname}${cleanQuery ? `?${cleanQuery}` : ''}${window.location.hash}`,
+        );
+      }
+
+      if (localStorage.getItem(storageKey) === '1') return;
+
+      const image = document.createElement('img');
+      image.src = {{ visitor_map.image_url | jsonify }};
+      image.alt = 'Map of website visitors';
+      image.loading = 'lazy';
+      image.style.maxWidth = '100%';
+      image.style.height = 'auto';
+
+      const destination = {{ visitor_map.stats_url | jsonify }};
+      const container = document.querySelector('#visitor-map');
+      if (destination) {
+        const link = document.createElement('a');
+        link.href = destination;
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+        link.append(image);
+        container.append(link);
+      } else {
+        container.append(image);
+      }
+    })();
+  </script>
+{% endif %}
