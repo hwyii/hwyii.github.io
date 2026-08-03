@@ -6,12 +6,12 @@ title: Weiyi He # the website title (if blank, full name will be used instead)
 first_name: Weiyi
 middle_name: ""
 last_name: He
-contact_note: > 
+contact_note: >
 
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Ph.D. student in Statistics & CS at MSU.
 footer_text: >
-  Powered by Jekyll with al-folio theme. Hosted by GitHub Pages. 
+  Powered by Jekyll with al-folio theme. Hosted by GitHub Pages.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🏀 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
