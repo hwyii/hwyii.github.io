@@ -8,39 +8,73 @@ nav_order: 4
 ---
 
 <style>
-  .periodical {
+  .other-page .periodical {
     display: none !important;
+  }
+
+  .other-section-title {
+    margin: 3.0rem 0 0.7rem;
+  }
+
+  .other-section-title:first-of-type {
+    margin-top: 0;
+  }
+
+  .other-page .publications {
+    margin-top: 0.7rem;
+  }
+
+  .other-page .publications ol.bibliography,
+  .other-page .publications ol.bibliography > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .other-list ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .other-list li {
+    line-height: 1.55;
+  }
+
+  .other-list li + li {
+    margin-top: 0.45rem;
   }
 </style>
 
-<h3 style="margin-top: 0; margin-bottom: 0;">Side Projects</h3>
+<div class="other-page">
+
+<h3 class="other-section-title">Side Projects</h3>
 
 <div class="publications">
   {% bibliography -f others %}
 </div>
 
-<h3 style="margin-top: 55px; margin-bottom: 0;">Work Experience</h3>
+<h3 class="other-section-title">Work Experience</h3>
 
-<div class="publications">
-  <ul style="margin-top: 0;">
+<div class="other-list">
+  <ul>
     <li><strong>Amazon</strong>, Applied Scientist Intern, Arlington, VA, Jun. 2026 - Aug. 2026</li>
     <li><strong>Articuler AI</strong>, Generative AI Development Intern, San Francisco, CA, Jun. 2024 - Aug. 2024</li>
     <li><strong>Elven</strong>, Data Engineering Intern, Singapore, Jan. 2024 - May 2024</li>
   </ul>
 </div>
 
-<h3 style="margin-top: 55px; margin-bottom: 0;">Posters</h3>
+<h3 class="other-section-title">Posters</h3>
 
-<div class="publications">
-  <ul style="margin-top: 0;">
+<div class="other-list">
+  <ul>
     <li>AISTATS 2026, May 2026, Tangier, Morocco</li>
   </ul>
 </div>
 
-<h3 style="margin-top: 55px; margin-bottom: 0;">Professional Service</h3>
+<h3 class="other-section-title">Professional Service</h3>
 
-<div class="publications">
-  <ul style="margin-top: 0;">
+<div class="other-list">
+  <ul>
     <li><strong>Reviewer:</strong> AISTATS, NeurIPS</li>
   </ul>
+</div>
+
 </div>
