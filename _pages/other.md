@@ -39,6 +39,6 @@ nav_order: 4
 
 <div class="publications">
   <ul style="margin-top: 0;">
-    <li><strong>Reviewer:</strong> AISTATS 2026, NeurIPS 2026</li>
+    <li><strong>Reviewer:</strong> AISTATS, NeurIPS</li>
   </ul>
 </div>
