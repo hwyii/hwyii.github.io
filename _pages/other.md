@@ -24,14 +24,16 @@ nav_order: 4
 <div class="publications">
   <ul style="margin-top: 0;">
     <li><strong>Amazon</strong>, Applied Scientist Intern, Arlington, VA, Jun. 2026 - Aug. 2026</li>
+    <li><strong>Articuler AI</strong>, Generative AI Development Intern, San Francisco, CA, Jun. 2024 - Aug. 2024</li>
+    <li><strong>Elven</strong>, Data Engineering Intern, Singapore, Jan. 2024 - May 2024</li>
   </ul>
 </div>
 
-<h3 style="margin-top: 55px; margin-bottom: 0;">Presentations</h3>
+<h3 style="margin-top: 55px; margin-bottom: 0;">Posters</h3>
 
 <div class="publications">
   <ul style="margin-top: 0;">
-    <li><strong>Poster:</strong> AISTATS 2026, May 2026, Tangier, Morocco</li>
+    <li>AISTATS 2026, May 2026, Tangier, Morocco</li>
   </ul>
 </div>
 
