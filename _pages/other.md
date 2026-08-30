@@ -42,13 +42,23 @@ nav_order: 4
     margin-top: 0.45rem;
   }
 
-  .other-list .company-logo {
+  .other-list .company-logo,
+  .other-list .event-logo {
     display: inline-block;
-    width: 1.1em;
     height: 1.1em;
     margin: 0 0.32em 0 0.06em;
     object-fit: contain;
     vertical-align: -0.18em;
+  }
+
+  .other-list .company-logo {
+    width: 1.1em;
+  }
+
+  .other-list .event-logo {
+    width: 2.43em;
+    height: 1.3em;
+    vertical-align: -0.25em;
   }
 
   html[data-theme="dark"] .other-list .company-logo--amazon {
@@ -81,7 +91,7 @@ nav_order: 4
 
 <div class="other-list">
   <ul>
-    <li>AISTATS 2026, May 2026, Tangier, Morocco</li>
+    <li><img class="event-logo" src="{{ '/assets/img/venues/aistats.svg' | relative_url }}" alt="" aria-hidden="true"><strong>AISTATS 2026</strong>, May 2026, Tangier, Morocco</li>
   </ul>
 </div>
 
