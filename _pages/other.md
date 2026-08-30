@@ -41,6 +41,22 @@ nav_order: 4
   .other-list li + li {
     margin-top: 0.45rem;
   }
+
+  .other-list .company-logo {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    margin: 0 0.32em 0 0.06em;
+    object-fit: contain;
+    vertical-align: -0.18em;
+  }
+
+  html[data-theme="dark"] .other-list .company-logo--amazon {
+    box-sizing: border-box;
+    padding: 0.06em;
+    border-radius: 0.16em;
+    background: #f2f0eb;
+  }
 </style>
 
 <div class="other-page">
@@ -55,9 +71,9 @@ nav_order: 4
 
 <div class="other-list">
   <ul>
-    <li><strong>Amazon</strong>, Applied Scientist Intern, Arlington, VA, Jun. 2026 - Aug. 2026</li>
-    <li><strong>Articuler AI</strong>, Generative AI Development Intern, San Francisco, CA, Jun. 2024 - Aug. 2024</li>
-    <li><strong>Elven</strong>, Data Engineering Intern, Singapore, Jan. 2024 - May 2024</li>
+    <li><img class="company-logo company-logo--amazon" src="{{ '/assets/img/company/amazon.svg' | relative_url }}" alt="" aria-hidden="true"><strong>Amazon</strong>, Applied Scientist Intern, Arlington, VA, Jun. 2026 - Aug. 2026</li>
+    <li><img class="company-logo" src="{{ '/assets/img/company/articuler.png' | relative_url }}" alt="" aria-hidden="true"><strong>Articuler AI</strong>, Generative AI Development Intern, San Francisco, CA, Jun. 2024 - Aug. 2024</li>
+    <li><img class="company-logo" src="{{ '/assets/img/company/elven.png' | relative_url }}" alt="" aria-hidden="true"><strong>Elven</strong>, Data Engineering Intern, Singapore, Jan. 2024 - May 2024</li>
   </ul>
 </div>
 

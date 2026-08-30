@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! I'm **Weiyi He**, a second-year Ph.D. student at [Michigan State University (MSU)](https://msu.edu), dual-majoring in Statistics and Computer Science. I am fortunate to be advised by [Prof. Yue Xing](https://sites.google.com/site/xingyuecuhk/) and [Prof. Jiliang Tang](https://www.cse.msu.edu/~tangjili/index.html). Prior to MSU, I received my B.S. in Statistics from [University of Science and Technology of China (USTC)](https://en.ustc.edu.cn/).
+Hello! I'm **Weiyi He**, a third-year Ph.D. student at [Michigan State University (MSU)](https://msu.edu), dual-majoring in Statistics and Computer Science. I am fortunate to be advised by [Prof. Yue Xing](https://sites.google.com/site/xingyuecuhk/) and [Prof. Jiliang Tang](https://www.cse.msu.edu/~tangjili/index.html). I was also an Applied Scientist Intern at [Amazon AGI](https://www.amazon.science/), where I worked on model robustness. Prior to MSU, I received my B.S. in Statistics from [University of Science and Technology of China (USTC)](https://en.ustc.edu.cn/).
 
 My research focuses on **Trustworthy AI**, **Adversarial Training**, **AI Safety**, and **statistical theory for Large Language Models (LLMs)**. I am dedicated to understanding the theoretical foundations of modern AI systems to enhance their reliability and security.
 
