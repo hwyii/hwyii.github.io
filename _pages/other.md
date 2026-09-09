@@ -13,7 +13,7 @@ nav_order: 4
   }
 
   .other-section-title {
-    margin: 3.0rem 0 0.7rem;
+    margin: 3.4rem 0 0.75rem;
   }
 
   .other-section-title:first-of-type {
@@ -21,7 +21,7 @@ nav_order: 4
   }
 
   .other-page .publications {
-    margin-top: 0.7rem;
+    margin-top: 0.75rem;
   }
 
   .other-page .publications ol.bibliography,
@@ -67,6 +67,40 @@ nav_order: 4
     border-radius: 0.16em;
     background: #f2f0eb;
   }
+
+  .travel-map-block {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .travel-map-description {
+    margin: 0 0 0.65rem;
+    color: var(--global-text-color-light);
+  }
+
+  .travel-map-frame {
+    width: 100%;
+    height: 360px;
+    display: block;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.75rem;
+    background: var(--global-bg-color);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+  }
+
+  html[data-theme="dark"] .travel-map-frame {
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.24);
+  }
+
+  @media (max-width: 576px) {
+    .travel-map-block {
+      width: 100%;
+    }
+
+    .travel-map-frame {
+      height: 300px;
+    }
+  }
 </style>
 
 <div class="other-page">
@@ -102,5 +136,66 @@ nav_order: 4
     <li><strong>Reviewer:</strong> AISTATS, NeurIPS</li>
   </ul>
 </div>
+
+<h3 class="other-section-title">Travel Footprints</h3>
+
+<div class="travel-map-block">
+<p class="travel-map-description">A map of places I have explored.</p>
+
+<iframe
+  id="travel-footprints-map"
+  class="travel-map-frame"
+  src="https://via-kappa-two.vercel.app/?embed=1"
+  title="Huiwen Yi's travel footprints"
+  loading="lazy"
+  referrerpolicy="no-referrer"
+></iframe>
+</div>
+
+<script>
+  (() => {
+    const frame = document.getElementById('travel-footprints-map');
+    if (!frame) return;
+
+    if (window.location.port) {
+      const localMapUrl = new URL(window.location.href);
+      localMapUrl.port = '5173';
+      localMapUrl.pathname = '/';
+      localMapUrl.search = '?embed=1';
+      localMapUrl.hash = '';
+      frame.src = localMapUrl.toString();
+    }
+
+    const syncTheme = () => {
+      const theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      if (!frame.contentWindow) return;
+
+      let targetOrigin = '*';
+      try {
+        targetOrigin = new URL(frame.src, window.location.href).origin;
+      } catch (_) {
+        // The iframe still accepts the theme when its URL cannot be resolved.
+      }
+      frame.contentWindow.postMessage({ type: 'via-theme', theme }, targetOrigin);
+    };
+
+    const scheduleThemeSync = () => {
+      syncTheme();
+      window.setTimeout(syncTheme, 150);
+      window.setTimeout(syncTheme, 600);
+    };
+
+    frame.addEventListener('load', scheduleThemeSync);
+    window.addEventListener('message', (event) => {
+      if (event.source === frame.contentWindow && event.data?.type === 'via-ready') {
+        scheduleThemeSync();
+      }
+    });
+    new MutationObserver(scheduleThemeSync).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+  })();
+</script>
 
 </div>
