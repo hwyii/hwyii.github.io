@@ -3,7 +3,7 @@ layout: page
 title: Radar
 permalink: /radar/
 description: Recent papers selected around my current research interests.
-nav: true
+nav: false
 nav_order: 3
 external_url: https://hwyii.github.io/dawnlit/
 ---

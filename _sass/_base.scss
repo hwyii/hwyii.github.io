@@ -415,23 +415,23 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 3.2rem;
 
     a {
       img {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 2.6rem;
+        height: 2.6rem;
         margin-bottom: 1rem;
       }
 
       svg {
-        width: 3.5rem;
-        height: 4rem;
+        width: 2.8rem;
+        height: 3.2rem;
         margin-bottom: 0.5rem;
 
         image {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 2.8rem;
+          height: 2.8rem;
         }
       }
 
@@ -714,6 +714,10 @@ footer.sticky-bottom {
 
 // Publications
 
+.selected-publications-heading {
+  margin-top: 2rem;
+}
+
 .publications {
   margin-top: 2rem;
 
@@ -751,11 +755,70 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
+      .publication-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        margin: 0.15rem 0 0;
+        overflow: hidden;
+        border-radius: 0.6rem;
+        background: $white-color;
+        box-shadow: 0 2px 8px rgba($black-color, 0.14);
+
+        figure,
+        picture {
+          display: block;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+        }
+
+        .preview {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 0.2rem;
+          border: 0;
+          object-fit: contain;
+          object-position: center;
+          cursor: default;
+        }
+      }
+
+      figure {
+        margin: 0;
       }
 
       .abbr {
         margin-bottom: 0.5rem;
+
+        &.has-preview {
+          position: relative;
+
+          abbr {
+            position: absolute;
+            top: 0.5rem;
+            right: 1.25rem;
+            z-index: 2;
+            width: 3rem !important;
+            margin: 0;
+            padding: 0.14rem 0.36rem;
+            border-radius: 999px;
+            font-size: 0.58rem;
+            line-height: 1.1;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba($black-color, 0.18);
+
+            a,
+            div {
+              display: block;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
 
         abbr {
           display: inline-block;
