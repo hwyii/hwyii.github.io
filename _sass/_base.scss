@@ -802,40 +802,42 @@ footer.sticky-bottom {
             top: 0.5rem;
             right: 1.25rem;
             z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            width: 3.75rem !important;
+            height: 1rem;
             margin: 0;
+            padding: 0 0.3rem;
+            border-radius: 0.25rem !important;
+            font-size: 0.62rem;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
             box-shadow: 0 1px 3px rgba($black-color, 0.18);
+
+            a,
+            div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              color: inherit;
+              font: inherit;
+              line-height: inherit;
+              text-align: center;
+            }
           }
         }
 
         abbr {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          box-sizing: border-box;
-          width: 3.75rem !important;
-          height: 1rem;
-          padding: 0 0.3rem;
+          display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
-          border-radius: 0.25rem !important;
           color: var(--global-card-bg-color) !important;
-          font-size: 0.62rem;
-          line-height: 1;
-          text-align: center;
-          white-space: nowrap;
-
-          a,
-          div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            color: inherit;
-            font: inherit;
-            line-height: inherit;
-            text-align: center;
-          }
+          font-size: 0.8rem;
 
           a {
             color: white;
