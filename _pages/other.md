@@ -133,7 +133,7 @@ nav_order: 4
 
 <div class="other-list">
   <ul>
-    <li><strong>Reviewer:</strong> AISTATS, NeurIPS</li>
+    <li><strong>Reviewer:</strong> AISTATS, NeurIPS, ICLR</li>
   </ul>
 </div>
 
