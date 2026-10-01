@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: academic-about
 title: About
 permalink: /
 subtitle: Ph.D. candidate at MSU
@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! I'm **Weiyi He**, a third-year Ph.D. student at [Michigan State University (MSU)](https://msu.edu), dual-majoring in Statistics and Computer Science. I am fortunate to be advised by [Prof. Yue Xing](https://sites.google.com/site/xingyuecuhk/) and [Prof. Jiliang Tang](https://www.cse.msu.edu/~tangjili/index.html). Prior to MSU, I received my B.S. in Statistics from the [University of Science and Technology of China (USTC)](https://en.ustc.edu.cn/), where I received the Outstanding Graduate Award.
+Hello! I'm **Weiyi He**, a third-year Ph.D. student at [Michigan State University (MSU)](https://msu.edu), dual-majoring in Statistics and Computer Science. I am fortunate to be advised by [Prof. Yue Xing](https://sites.google.com/site/xingyuecuhk/) and [Prof. Jiliang Tang](https://www.cse.msu.edu/~tangjili/index.html). I received my B.S. in Statistics from the [University of Science and Technology of China (USTC)](https://en.ustc.edu.cn/), where I received the Outstanding Graduate Award.
 
-My research focuses on **Trustworthy AI**, with an emphasis on **LLM robustness**, **Adversarial Training**, and **Statistical methods for understanding modern AI systems**. I was an Applied Scientist Intern at [Amazon AGI](https://www.amazon.science/), where I worked with [Giuseppe Vietri](https://www.giuseppevietri.com/), [Dionysis Manousakas](https://www.cl.cam.ac.uk/~dm754/), and [Dmitriy Bespalov](https://github.com/dbespalov) on understanding and evaluating robustness in large language models, particularly their robustness to input and parameter perturbations. My broader goal is to develop principled methods for making modern AI systems more reliable and robust.
+My research focuses on **Trustworthy AI**, particularly **LLM robustness** and **Adversarial Training**. I am interested in developing statistical tools to understand modern AI systems and principled methods to improve their reliability. I was an Applied Scientist Intern at [Amazon AGI](https://www.amazon.science/), where I worked with [Giuseppe Vietri](https://www.giuseppevietri.com/), [Dionysis Manousakas](https://www.cl.cam.ac.uk/~dm754/), and [Dmitriy Bespalov](https://github.com/dbespalov) on understanding and evaluating LLM robustness to input and parameter perturbations. 
 
 _\*Bold indicates first or co-first authorship._

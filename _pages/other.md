@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: academic-page
 title: Other
 permalink: /other/
-description: Side projects, work experience, presentations, and professional service.
+description: Work experience, presentations, professional service, and travel footprints.
 nav: true
 nav_order: 4
 ---
@@ -105,12 +105,6 @@ nav_order: 4
 
 <div class="other-page">
 
-<h3 class="other-section-title">Side Projects</h3>
-
-<div class="publications">
-  {% bibliography -f others %}
-</div>
-
 <h3 class="other-section-title">Work Experience</h3>
 
 <div class="other-list">
@@ -145,8 +139,8 @@ nav_order: 4
 <iframe
   id="travel-footprints-map"
   class="travel-map-frame"
-  src="https://via-kappa-two.vercel.app/?embed=1"
-  title="Huiwen Yi's travel footprints"
+  src="{{ '/assets/travel-map/index.html' | relative_url }}?embed=1"
+  title="Weiyi He's travel footprints"
   loading="lazy"
   referrerpolicy="no-referrer"
 ></iframe>
@@ -156,15 +150,6 @@ nav_order: 4
   (() => {
     const frame = document.getElementById('travel-footprints-map');
     if (!frame) return;
-
-    if (window.location.port) {
-      const localMapUrl = new URL(window.location.href);
-      localMapUrl.port = '5173';
-      localMapUrl.pathname = '/';
-      localMapUrl.search = '?embed=1';
-      localMapUrl.hash = '';
-      frame.src = localMapUrl.toString();
-    }
 
     const syncTheme = () => {
       const theme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
@@ -176,7 +161,7 @@ nav_order: 4
       } catch (_) {
         // The iframe still accepts the theme when its URL cannot be resolved.
       }
-      frame.contentWindow.postMessage({ type: 'via-theme', theme }, targetOrigin);
+      frame.contentWindow.postMessage({ type: 'via-theme', theme, palette: document.documentElement.dataset.palette }, targetOrigin);
     };
 
     const scheduleThemeSync = () => {

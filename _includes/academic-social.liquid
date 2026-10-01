@@ -1,0 +1,8 @@
+<div class="social-links">
+  {% assign socials = site.data.socials %}
+  {% if socials.email %}<a class="social-link" href="mailto:{{ socials.email }}" aria-label="Email" title="Email">{% include academic-icon.liquid name='email' %}</a>{% endif %}
+  {% if socials.scholar_userid %}<a class="social-link" href="https://scholar.google.com/citations?user={{ socials.scholar_userid | split: '&' | first | uri_escape }}" aria-label="Google Scholar" title="Google Scholar">{% include academic-icon.liquid name='scholar' %}</a>{% endif %}
+  {% if socials.github_username %}<a class="social-link" href="https://github.com/{{ socials.github_username }}" aria-label="GitHub" title="GitHub">{% include academic-icon.liquid name='github' %}</a>{% endif %}
+  {% if socials.linkedin_username %}<a class="social-link" href="https://www.linkedin.com/in/{{ socials.linkedin_username }}/" aria-label="LinkedIn" title="LinkedIn">{% include academic-icon.liquid name='linkedin' %}</a>{% endif %}
+  {% if socials.cv_pdf %}<a class="social-link" href="{{ socials.cv_pdf | relative_url }}" aria-label="Curriculum vitae" title="Curriculum vitae">{% include academic-icon.liquid name='paper' %}</a>{% endif %}
+</div>

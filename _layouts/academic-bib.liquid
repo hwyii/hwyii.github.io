@@ -1,0 +1,30 @@
+---
+---
+<article class="pub-card" id="{{ entry.key }}">
+  {% if entry.abbr %}<div class="pub-tags"><span class="tag {% if entry.abbr == 'arXiv' %}tag-venue{% else %}tag-conference{% endif %}">{{ entry.abbr }}{% unless entry.abbr == 'arXiv' or entry.abbr == 'Web Dev' %} {{ entry.year }}{% endunless %}</span></div>{% endif %}
+  <h3 class="pub-title">{% if entry.url %}<a href="{{ entry.url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</h3>
+  <div class="pub-authors">
+    {%- for author in entry.author_array -%}
+      {%- unless forloop.first -%}, {% endunless -%}
+      {%- assign last = author.last | remove: '*' -%}
+      {%- if site.scholar.last_name contains last and site.scholar.first_name contains author.first -%}
+        <span class="self">{{ author.first }} {{ author.last }}</span>
+      {%- else -%}
+        {{ author.first }} {{ author.last }}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  {% if entry.journal or entry.booktitle %}<div class="pub-venue">{{ entry.journal | default: entry.booktitle }}, {{ entry.year }}</div>{% endif %}
+  <div class="pub-links">
+    {% if entry.abbr == 'Web Dev' and entry.url %}<a class="pub-link" href="{{ entry.url }}">{% include academic-icon.liquid name='project' %} Project</a>{% endif %}
+    {% if entry.pdf %}
+      {% assign pdf = entry.pdf %}{% unless pdf contains '://' %}{% assign pdf = pdf | prepend: '/assets/pdf/' | relative_url %}{% endunless %}
+      <a class="pub-link" href="{{ pdf }}">{% include academic-icon.liquid name='paper' %} Paper</a>
+    {% endif %}
+    {% if entry.code %}<a class="pub-link" href="{{ entry.code }}">{% include academic-icon.liquid name='github' %} Code</a>{% endif %}
+    {% if entry.poster %}
+      {% assign poster = entry.poster %}{% unless poster contains '://' %}{% assign poster = poster | prepend: '/assets/pdf/' | relative_url %}{% endunless %}
+      <a class="pub-link" href="{{ poster }}">{% include academic-icon.liquid name='paper' %} Poster</a>
+    {% endif %}
+  </div>
+</article>

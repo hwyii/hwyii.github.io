@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.url != '/' %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="{{ '/assets/img/academic-favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url | bust_file_cache }}">
+    <script src="{{ '/assets/js/academic.js' | relative_url | bust_file_cache }}"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="nav-logo" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/img/academic-favicon.svg' | relative_url }}" width="30" height="30" alt="">
+          <span>{{ site.title }}</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>About</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}class="active" aria-current="page"{% endif %}>Publications</a></li>
+          <li><a href="{{ '/other/' | relative_url }}" {% if page.url == '/other/' %}class="active" aria-current="page"{% endif %}>Other</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="page" id="main">{{ content }}</main>
+    <footer class="footer">© {{ site.time | date: '%Y' }} {{ site.title }} <span aria-hidden="true">·</span> Hosted on <a href="https://pages.github.com/">GitHub Pages</a></footer>
+    <div class="palette-switcher" role="group" aria-label="Color palette" hidden>
+      <span class="palette-name">Cocoa</span>
+      <button type="button" class="palette-dot palette-espresso" data-palette="espresso" aria-label="Espresso dark palette" aria-pressed="false" title="Espresso"></button>
+      <button type="button" class="palette-dot palette-cocoa" data-palette="cocoa" aria-label="Cocoa palette" aria-pressed="true" title="Cocoa"></button>
+    </div>
+  </body>
+</html>
