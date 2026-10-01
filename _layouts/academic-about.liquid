@@ -18,13 +18,28 @@ layout: academic
         <h2 class="section-title" id="news-title">News</h2>
         <ul class="news-list" id="news-list">
           {% for item in news %}
-            <li class="news-item" {% if forloop.index > 4 %}data-extra-news{% endif %}>
+            <li
+              class="news-item"
+              {% if forloop.index > 4 %}
+                data-extra-news
+              {% endif %}
+            >
               <time class="news-date" datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
-              <div class="news-text">{% if item.inline %}{{ item.content }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div>
+              <div class="news-text">
+                {% if item.inline -%}
+                  {{- item.content -}}
+                {%- else -%}
+                  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {%- endif %}
+              </div>
             </li>
           {% endfor %}
         </ul>
-        {% if news.size > 4 %}<button type="button" class="news-toggle" aria-expanded="false" aria-controls="news-list" hidden>Show {{ news.size | minus: 4 }} more</button>{% endif %}
+        {% if news.size > 4 -%}
+          <button type="button" class="news-toggle" aria-expanded="false" aria-controls="news-list" hidden>
+            Show {{ news.size | minus: 4 }} more
+          </button>
+        {%- endif %}
       </section>
     {% endif %}
     {% if page.selected_papers %}

@@ -12,3 +12,7 @@ node_modules/
 vendor
 .idea
 .venv
+
+# Keep any future local archives out of Git.
+archive/
+_archive/
