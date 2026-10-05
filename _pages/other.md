@@ -123,6 +123,14 @@ nav_order: 4
   </ul>
 </div>
 
+<h3 class="other-section-title">Research Talks</h3>
+
+<div class="other-list">
+  <ul>
+    <li><strong>Guest Lecture in Statistical Theory of Deep Learning</strong>, MSU, Nov 2026, East Lansing, US</li>
+  </ul>
+</div>
+
 <h3 class="other-section-title">Professional Service</h3>
 
 <div class="other-list">

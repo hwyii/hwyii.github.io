@@ -51,5 +51,10 @@
       {%- unless poster contains '://' %}{% assign poster = poster | prepend: '/assets/pdf/' | relative_url %}{% endunless %}
       <a class="pub-link" href="{{ poster }}">{% include academic-icon.liquid name='paper' %} Poster</a>
     {% endif %}
+    {% assign slides = entry.slides | default: '' | strip %}
+    {% if slides != '' %}
+      {% unless slides contains '://' %}{% assign slides = slides | prepend: '/assets/pdf/' | relative_url %}{% endunless %}
+      <a class="pub-link" href="{{ slides }}">{% include academic-icon.liquid name='paper' %} Slides</a>
+    {% endif %}
   </div>
 </article>
