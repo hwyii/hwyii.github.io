@@ -42,30 +42,58 @@ nav_order: 4
     margin-top: 0.45rem;
   }
 
-  .other-list .company-logo,
-  .other-list .event-logo {
-    display: inline-block;
-    height: 1.1em;
-    margin: 0 0.32em 0 0.06em;
-    object-fit: contain;
-    vertical-align: -0.18em;
-  }
-
-  .other-list .company-logo {
-    width: 1.1em;
-  }
-
-  .other-list .event-logo {
-    width: 2.43em;
-    height: 1.3em;
-    vertical-align: -0.25em;
-  }
-
-  html[data-theme="dark"] .other-list .company-logo--amazon {
+  html[data-theme="dark"] .entry-logo--amazon {
     box-sizing: border-box;
     padding: 0.06em;
     border-radius: 0.16em;
     background: #f2f0eb;
+  }
+
+  .entry-item {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 14px;
+    padding: 0.35rem 0;
+  }
+
+  .entry-logo {
+    width: 20px;
+    height: 20px;
+    justify-self: center;
+    object-fit: contain;
+  }
+
+  .entry-logo--seal {
+    width: 30px;
+    height: 30px;
+  }
+
+  .entry-logo--wide {
+    width: 40px;
+    height: auto;
+  }
+
+  .entry-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.5rem;
+    line-height: 1.45;
+  }
+
+  .entry-name {
+    font-weight: 600;
+  }
+
+  .entry-detail,
+  .entry-date {
+    font-size: 0.92em;
+    color: var(--global-text-color-light);
+  }
+
+  .entry-date {
+    white-space: nowrap;
   }
 
   .travel-map-block {
@@ -93,6 +121,29 @@ nav_order: 4
   }
 
   @media (max-width: 576px) {
+    .entry-item {
+      grid-template-columns: 36px minmax(0, 1fr);
+    }
+
+    .entry-logo {
+      width: 18px;
+      height: 18px;
+    }
+
+    .entry-logo--seal {
+      width: 26px;
+      height: 26px;
+    }
+
+    .entry-logo--wide {
+      width: 36px;
+      height: auto;
+    }
+
+    .entry-date {
+      grid-column: 2;
+    }
+
     .travel-map-block {
       width: 100%;
     }
@@ -107,28 +158,57 @@ nav_order: 4
 
 <h3 class="other-section-title">Work Experience</h3>
 
-<div class="other-list">
-  <ul>
-    <li><img class="company-logo company-logo--amazon" src="{{ '/assets/img/company/amazon.svg' | relative_url }}" alt="" aria-hidden="true"><strong>Amazon</strong>, Applied Scientist Intern, Arlington, VA, Jun. 2026 - Aug. 2026</li>
-    <li><img class="company-logo" src="{{ '/assets/img/company/articuler.png' | relative_url }}" alt="" aria-hidden="true"><strong>Articuler AI</strong>, Generative AI Development Intern, San Francisco, CA, Jun. 2024 - Aug. 2024</li>
-    <li><img class="company-logo" src="{{ '/assets/img/company/elven.png' | relative_url }}" alt="" aria-hidden="true"><strong>Elven</strong>, Data Engineering Intern, Singapore, Jan. 2024 - May 2024</li>
-  </ul>
+<div class="entry-list">
+  <div class="entry-item">
+    <img class="entry-logo entry-logo--amazon" src="{{ '/assets/img/company/amazon.svg' | relative_url }}" alt="" aria-hidden="true">
+    <div class="entry-info">
+      <span class="entry-name">Amazon</span>
+      <span class="entry-detail">Applied Scientist Intern · Arlington, VA</span>
+    </div>
+    <span class="entry-date">Jun 2026 – Aug 2026</span>
+  </div>
+  <div class="entry-item">
+    <img class="entry-logo" src="{{ '/assets/img/company/articuler.png' | relative_url }}" alt="" aria-hidden="true">
+    <div class="entry-info">
+      <span class="entry-name">Articuler AI</span>
+      <span class="entry-detail">Generative AI Development Intern · San Francisco, CA</span>
+    </div>
+    <span class="entry-date">Jun 2024 – Aug 2024</span>
+  </div>
+  <div class="entry-item">
+    <img class="entry-logo" src="{{ '/assets/img/company/elven.png' | relative_url }}" alt="" aria-hidden="true">
+    <div class="entry-info">
+      <span class="entry-name">Elven</span>
+      <span class="entry-detail">Data Engineering Intern · Singapore</span>
+    </div>
+    <span class="entry-date">Jan 2024 – May 2024</span>
+  </div>
 </div>
 
 <h3 class="other-section-title">Posters</h3>
 
-<div class="other-list">
-  <ul>
-    <li><img class="event-logo" src="{{ '/assets/img/venues/aistats.svg' | relative_url }}" alt="" aria-hidden="true"><strong>AISTATS 2026</strong>, May 2026, Tangier, Morocco</li>
-  </ul>
+<div class="entry-list">
+  <div class="entry-item">
+    <img class="entry-logo entry-logo--wide" src="{{ '/assets/img/venues/aistats.svg' | relative_url }}" alt="" aria-hidden="true">
+    <div class="entry-info">
+      <span class="entry-name">AISTATS 2026</span>
+      <span class="entry-detail">Tangier, Morocco</span>
+    </div>
+    <span class="entry-date">May 2026</span>
+  </div>
 </div>
 
-<h3 class="other-section-title">Research Talks</h3>
+<h3 class="other-section-title">Invited Talks</h3>
 
-<div class="other-list">
-  <ul>
-    <li><strong>Guest Lecture</strong>, MSU, Nov 2026, East Lansing, US</li>
-  </ul>
+<div class="entry-list">
+  <div class="entry-item">
+    <img class="entry-logo entry-logo--seal" src="{{ '/assets/img/venues/msu.svg' | relative_url }}" alt="" aria-hidden="true">
+    <div class="entry-info">
+      <span class="entry-name">Michigan State University</span>
+      <span class="entry-detail">Guest Lecture in Statistical Theory of Deep Learning</span>
+    </div>
+    <span class="entry-date">Nov 2026</span>
+  </div>
 </div>
 
 <h3 class="other-section-title">Professional Service</h3>
