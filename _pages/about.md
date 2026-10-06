@@ -31,4 +31,5 @@ Hello! I'm **Weiyi He**, a third-year Ph.D. student at [Michigan State Universit
 
 My research focuses on **Trustworthy AI**, particularly **LLM robustness** and **Adversarial Training**. I am interested in developing statistical tools to understand modern AI systems and principled methods to improve their reliability. I was an Applied Scientist Intern at **[Amazon AGI](https://www.amazon.science/)**, where I worked with [Giuseppe Vietri](https://www.giuseppevietri.com/), [Dionysis Manousakas](https://www.cl.cam.ac.uk/~dm754/), and [Dmitriy Bespalov](https://github.com/dbespalov) on understanding and evaluating LLM robustness to input and parameter perturbations.
 
-_<p style="font-size: 0.83rem; color: var(--global-text-color-light);"><strong style="color: var(--global-text-color);">Bold</strong> indicates first or co-first authorship.</p>
+**Bold** indicates first or co-first authorship.
+{: style="font-size: 0.83rem; color: var(--global-text-color-light);"}
