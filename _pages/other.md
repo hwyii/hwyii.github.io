@@ -2,7 +2,7 @@
 layout: academic-page
 title: Other
 permalink: /other/
-description: Work experience, presentations, professional service, and travel footprints.
+description: Work experience, presentations, awards, professional service, and travel footprints.
 nav: true
 nav_order: 4
 ---
@@ -40,6 +40,13 @@ nav_order: 4
 
   .other-list li + li {
     margin-top: 0.45rem;
+  }
+
+  .award-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
   }
 
   html[data-theme="dark"] .entry-logo--amazon {
@@ -209,6 +216,25 @@ nav_order: 4
     </div>
     <span class="entry-date">Nov 2026</span>
   </div>
+</div>
+
+<h3 class="other-section-title">Awards</h3>
+
+<div class="other-list">
+  <ul>
+    <li>
+      <div class="award-row">
+        <span>NeurIPS 2026 Financial Assistance Award</span>
+        <span class="entry-date">2026</span>
+      </div>
+    </li>
+    <li>
+      <div class="award-row">
+        <span>Outstanding Graduate Award</span>
+        <span class="entry-date">2024</span>
+      </div>
+    </li>
+  </ul>
 </div>
 
 <h3 class="other-section-title">Professional Service</h3>
