@@ -224,13 +224,13 @@ nav_order: 4
   <ul>
     <li>
       <div class="award-row">
-        <span>NeurIPS 2026 Financial Assistance Award</span>
+        <span><strong>Financial Assistance Award</strong> · NeurIPS</span>
         <span class="entry-date">2026</span>
       </div>
     </li>
     <li>
       <div class="award-row">
-        <span>Outstanding Graduate Award</span>
+        <span><strong>Outstanding Graduate Award</strong> · USTC</span>
         <span class="entry-date">2024</span>
       </div>
     </li>
