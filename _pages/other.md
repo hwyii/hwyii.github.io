@@ -241,7 +241,7 @@ nav_order: 4
 
 <div class="other-list">
   <ul>
-    <li><strong>Reviewer:</strong> AISTATS, NeurIPS, ICLR</li>
+    <li><strong>Reviewer:</strong> AISTATS, NeurIPS, ICLR, IEEE TSE</li>
   </ul>
 </div>
 
