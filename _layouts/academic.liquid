@@ -48,6 +48,15 @@
           </li>
           <li>
             <a
+              href="{{ '/teaching/' | relative_url }}"
+              {% if page.url == '/teaching/' %}
+                class="active" aria-current="page"
+              {% endif %}
+              >Teaching</a
+            >
+          </li>
+          <li>
+            <a
               href="{{ '/other/' | relative_url }}"
               {% if page.url == '/other/' %}
                 class="active" aria-current="page"
