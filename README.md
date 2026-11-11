@@ -7,7 +7,8 @@ Academic homepage at <https://hwyii.github.io>, built with Jekyll.
 - `_pages/about.md`: homepage biography.
 - `_news/`: dated news items.
 - `_bibliography/papers.bib`: publications; `selected={true}` includes a paper on the homepage.
-- `_pages/other.md`: experience, service, and travel map.
+- `_pages/teaching.md`: combined work and teaching experience page.
+- `_pages/other.md`: presentations, service, awards, and travel map.
 - `_data/socials.yml`: contact links and CV PDF.
 - `_layouts/academic*.liquid`, `_includes/academic*.liquid`: page templates.
 - `assets/css/academic.css`, `assets/js/academic.js`: styling and interactions.

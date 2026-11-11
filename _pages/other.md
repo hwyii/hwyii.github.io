@@ -2,7 +2,7 @@
 layout: academic-page
 title: Other
 permalink: /other/
-description: Work experience, presentations, awards, professional service, and travel footprints.
+description: Presentations, awards, professional service, and travel footprints.
 nav: true
 nav_order: 4
 ---
@@ -163,36 +163,7 @@ nav_order: 4
 
 <div class="other-page">
 
-<h3 class="other-section-title">Work Experience</h3>
-
-<div class="entry-list">
-  <div class="entry-item">
-    <img class="entry-logo entry-logo--amazon" src="{{ '/assets/img/company/amazon.svg' | relative_url }}" alt="" aria-hidden="true">
-    <div class="entry-info">
-      <span class="entry-name">Amazon</span>
-      <span class="entry-detail">Applied Scientist Intern · Arlington, VA</span>
-    </div>
-    <span class="entry-date">Jun 2026 – Aug 2026</span>
-  </div>
-  <div class="entry-item">
-    <img class="entry-logo" src="{{ '/assets/img/company/articuler.png' | relative_url }}" alt="" aria-hidden="true">
-    <div class="entry-info">
-      <span class="entry-name">Articuler AI</span>
-      <span class="entry-detail">Generative AI Development Intern · San Francisco, CA</span>
-    </div>
-    <span class="entry-date">Jun 2024 – Aug 2024</span>
-  </div>
-  <div class="entry-item">
-    <img class="entry-logo" src="{{ '/assets/img/company/elven.png' | relative_url }}" alt="" aria-hidden="true">
-    <div class="entry-info">
-      <span class="entry-name">Elven</span>
-      <span class="entry-detail">Data Engineering Intern · Singapore</span>
-    </div>
-    <span class="entry-date">Jan 2024 – May 2024</span>
-  </div>
-</div>
-
-<h3 class="other-section-title">Posters</h3>
+<h3 class="other-section-title">Posters<span class="title-emoji" aria-hidden="true">🖼️</span></h3>
 
 <div class="entry-list">
   <div class="entry-item">
@@ -205,7 +176,7 @@ nav_order: 4
   </div>
 </div>
 
-<h3 class="other-section-title">Invited Talks</h3>
+<h3 class="other-section-title">Invited Talks<span class="title-emoji" aria-hidden="true">🎤</span></h3>
 
 <div class="entry-list">
   <div class="entry-item">
@@ -218,7 +189,7 @@ nav_order: 4
   </div>
 </div>
 
-<h3 class="other-section-title">Awards</h3>
+<h3 class="other-section-title">Awards<span class="title-emoji" aria-hidden="true">🏆</span></h3>
 
 <div class="other-list">
   <ul>
@@ -237,7 +208,7 @@ nav_order: 4
   </ul>
 </div>
 
-<h3 class="other-section-title">Professional Service</h3>
+<h3 class="other-section-title">Professional Service<span class="title-emoji" aria-hidden="true">🤝</span></h3>
 
 <div class="other-list">
   <ul>
@@ -245,7 +216,7 @@ nav_order: 4
   </ul>
 </div>
 
-<h3 class="other-section-title">Travel Footprints</h3>
+<h3 class="other-section-title">Travel Footprints<span class="title-emoji" aria-hidden="true">🗺️</span></h3>
 
 <div class="travel-map-block">
 <p class="travel-map-description">A map of places I have explored.</p>
@@ -292,7 +263,7 @@ nav_order: 4
     });
     new MutationObserver(scheduleThemeSync).observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ['data-theme'],
+      attributeFilter: ['data-theme', 'data-palette'],
     });
   })();
 </script>

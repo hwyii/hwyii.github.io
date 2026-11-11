@@ -11,11 +11,11 @@ layout: academic
     {% include academic-social.liquid %}
   </aside>
   <div class="main-content">
-    <section class="section bio" aria-label="About Weiyi">{{ content }}</section>
+    <section class="section bio" id="about" data-nav-section aria-label="About Weiyi">{{ content }}</section>
     {% if page.announcements.enabled %}
       {% assign news = site.news | sort: 'date' | reverse %}
-      <section class="section" aria-labelledby="news-title">
-        <h2 class="section-title" id="news-title">News</h2>
+      <section class="section" id="news" data-nav-section aria-labelledby="news-title">
+        <h2 class="section-title" id="news-title">News<span class="title-emoji" aria-hidden="true">📰</span></h2>
         <ul class="news-list" id="news-list">
           {% for item in news %}
             <li
@@ -43,11 +43,16 @@ layout: academic
       </section>
     {% endif %}
     {% if page.selected_papers %}
-      <section class="section" aria-labelledby="publications-title">
-        <h2 class="section-title" id="publications-title">Selected Publications</h2>
+      <section class="section" id="publications" data-nav-section aria-labelledby="publications-title">
+        <h2 class="section-title" id="publications-title">Selected Publications<span class="title-emoji" aria-hidden="true">📚</span></h2>
         <div class="pub-list">{% bibliography --query @*[selected=true]* --template academic-bib --group_by none %}</div>
         <p class="pub-footnote"><a href="{{ '/publications/' | relative_url }}">View all publications →</a></p>
       </section>
     {% endif %}
+    <section class="section" id="internships" data-nav-section aria-labelledby="internships-title">
+      <h2 class="section-title" id="internships-title">Internships<span class="title-emoji" aria-hidden="true">💼</span></h2>
+      {% include academic-experience.liquid internships_only=true %}
+      <p class="pub-footnote"><a href="{{ '/experience/' | relative_url }}">View full experience →</a></p>
+    </section>
   </div>
 </div>

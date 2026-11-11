@@ -23,23 +23,32 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <nav class="nav" aria-label="Main navigation">
       <div class="nav-inner">
-        <a class="nav-logo" href="{{ '/' | relative_url }}">
+        <a class="nav-logo" href="{{ '/#about' | relative_url }}">
           <img src="{{ '/assets/img/academic-favicon.svg' | relative_url }}" width="30" height="30" alt="">
           <span>{{ site.title }}</span>
         </a>
         <ul class="nav-links">
           <li>
             <a
-              href="{{ '/' | relative_url }}"
+              href="{{ '/#about' | relative_url }}"
+              data-section-link="about"
               {% if page.url == '/' %}
-                class="active" aria-current="page"
+                class="active" aria-current="location"
               {% endif %}
               >About</a
             >
           </li>
           <li>
             <a
-              href="{{ '/publications/' | relative_url }}"
+              href="{{ '/#news' | relative_url }}"
+              data-section-link="news"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ '/#publications' | relative_url }}"
+              data-section-link="publications"
               {% if page.url == '/publications/' %}
                 class="active" aria-current="page"
               {% endif %}
@@ -48,11 +57,12 @@
           </li>
           <li>
             <a
-              href="{{ '/teaching/' | relative_url }}"
-              {% if page.url == '/teaching/' %}
+              href="{{ '/#internships' | relative_url }}"
+              data-section-link="internships"
+              {% if page.url == '/experience/' %}
                 class="active" aria-current="page"
               {% endif %}
-              >Teaching</a
+              >Internships</a
             >
           </li>
           <li>
@@ -90,6 +100,14 @@
         aria-label="Cocoa palette"
         aria-pressed="true"
         title="Cocoa"
+      ></button>
+      <button
+        type="button"
+        class="palette-dot palette-matcha"
+        data-palette="matcha"
+        aria-label="Matcha sage green palette"
+        aria-pressed="false"
+        title="Matcha"
       ></button>
     </div>
   </body>

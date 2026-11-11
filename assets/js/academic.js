@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const palettes = { cocoa: "Cocoa", espresso: "Espresso" };
+  const palettes = { cocoa: "Cocoa", matcha: "Matcha", espresso: "Espresso" };
   const storageKey = "weiyi-academic-palette";
   let selected = "cocoa";
   try {
@@ -9,6 +9,8 @@
   } catch (_) {
     /* The default palette also works without browser storage. */
   }
+  const requestedPalette = new URLSearchParams(window.location.search).get("palette");
+  if (Object.hasOwn(palettes, requestedPalette)) selected = requestedPalette;
 
   function applyPalette(key) {
     document.documentElement.dataset.palette = key;
@@ -35,6 +37,27 @@
         }
       });
     });
+
+    const sectionLinks = [...document.querySelectorAll("[data-section-link]")];
+    const sections = [...document.querySelectorAll("[data-nav-section]")];
+    if (sectionLinks.length && sections.length && "IntersectionObserver" in window) {
+      const setActiveSection = (id) => {
+        sectionLinks.forEach((link) => {
+          const active = link.dataset.sectionLink === id;
+          link.classList.toggle("active", active);
+          if (active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      };
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible) setActiveSection(visible.target.id);
+        },
+        { rootMargin: "-72px 0px -58% 0px", threshold: [0.05, 0.25, 0.5] }
+      );
+      sections.forEach((section) => observer.observe(section));
+    }
 
     const toggle = document.querySelector(".news-toggle");
     const extraNews = [...document.querySelectorAll("[data-extra-news]")];
