@@ -13,7 +13,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&amp;text=%E8%B4%BA%E7%BB%B4%E6%98%93&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url | bust_file_cache }}">
@@ -24,7 +28,7 @@
     <nav class="nav" aria-label="Main navigation">
       <div class="nav-inner">
         <a class="nav-logo" href="{{ '/#about' | relative_url }}">
-          <img src="{{ '/assets/img/academic-favicon.svg' | relative_url }}" width="30" height="30" alt="">
+          <span class="nav-logo-emoji" aria-hidden="true">🏀</span>
           <span>{{ site.title }}</span>
         </a>
         <ul class="nav-links">
@@ -103,11 +107,11 @@
       ></button>
       <button
         type="button"
-        class="palette-dot palette-matcha"
-        data-palette="matcha"
-        aria-label="Matcha sage green palette"
+        class="palette-dot palette-ink"
+        data-palette="ink"
+        aria-label="Ink paper and navy palette"
         aria-pressed="false"
-        title="Matcha"
+        title="Ink"
       ></button>
     </div>
   </body>

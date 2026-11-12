@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const palettes = { cocoa: "Cocoa", matcha: "Matcha", espresso: "Espresso" };
+  const palettes = { cocoa: "Cocoa", ink: "Ink", espresso: "Espresso" };
   const storageKey = "weiyi-academic-palette";
   let selected = "cocoa";
   try {
