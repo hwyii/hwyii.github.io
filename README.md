@@ -14,8 +14,7 @@ Source of <https://hwyii.github.io>, built with Jekyll.
 ## Local preview
 
 ```bash
-bundle install
-bundle exec jekyll serve --livereload
+./preview.sh   # Docker (or Singularity) with the al-folio image; PORT=xxxx to change port
 ```
 
-Then open <http://localhost:4000>. Pushing to `main` deploys the site via GitHub Actions.
+Then open <http://localhost:8081>; edits rebuild and reload automatically. Pushing to `main` deploys the site via GitHub Actions.
