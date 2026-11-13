@@ -22,12 +22,12 @@
     {% if entry.poster %}
       {% assign poster = entry.poster -%}
       {%- unless poster contains '://' %}{% assign poster = poster | prepend: '/assets/pdf/' | relative_url %}{% endunless %}
-      <a class="pub-link" href="{{ poster }}">{% include academic-icon.liquid name='paper' %} Poster</a>
+      <a class="pub-link" href="{{ poster }}">{% include academic-icon.liquid name='poster' %} Poster</a>
     {% endif %}
     {% assign slides = entry.slides | default: '' | strip %}
     {% if slides != '' %}
       {% unless slides contains '://' %}{% assign slides = slides | prepend: '/assets/pdf/' | relative_url %}{% endunless %}
-      <a class="pub-link" href="{{ slides }}">{% include academic-icon.liquid name='paper' %} Slides</a>
+      <a class="pub-link" href="{{ slides }}">{% include academic-icon.liquid name='slides' %} Slides</a>
     {% endif %}
   </div>
   <h3 class="pub-title">
