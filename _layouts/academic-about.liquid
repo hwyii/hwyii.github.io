@@ -50,8 +50,51 @@ layout: academic
       </section>
     {% endif %}
     <section class="section" id="internships" data-nav-section aria-labelledby="internships-title">
-      <h2 class="section-title" id="internships-title">Internships<span class="title-emoji" aria-hidden="true">💼</span></h2>
-      {% include academic-experience.liquid internships_only=true %}
+      <h2 class="section-title" id="internships-title">Experience<span class="title-emoji" aria-hidden="true">💼</span></h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-when">
+            <time>Jun – Aug 2026</time>
+            <span class="timeline-kind">Industry Research</span>
+          </div>
+          <div class="timeline-rail">
+            <img class="timeline-logo timeline-logo--amazon" src="{{ '/assets/img/company/amazon.svg' | relative_url }}" alt="" aria-hidden="true">
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-org">Amazon AGI</h3>
+            <p class="timeline-role">Applied Scientist Intern</p>
+            <p class="timeline-people">Mentors: Giuseppe Vietri, Dionysis Manousakas &amp; Dmitriy Bespalov</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-when">
+            <time>2024 – present</time>
+            <span class="timeline-kind">Education</span>
+          </div>
+          <div class="timeline-rail">
+            <img class="timeline-logo" src="{{ '/assets/img/venues/msu.svg' | relative_url }}" alt="" aria-hidden="true">
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-org">Michigan State University</h3>
+            <p class="timeline-role">Ph.D. in Statistics and Computer Science</p>
+            <p class="timeline-people">Advisors: Yue Xing &amp; Jiliang Tang</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-when">
+            <time>2020 – 2024</time>
+            <span class="timeline-kind">Education</span>
+          </div>
+          <div class="timeline-rail">
+            <img class="timeline-logo" src="{{ '/assets/img/venues/ustc.svg' | relative_url }}" alt="" aria-hidden="true">
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-org">University of Science and Technology of China</h3>
+            <p class="timeline-role">B.S. in Statistics</p>
+            <p class="timeline-people">Advisor: Yaning Yang</p>
+          </div>
+        </li>
+      </ol>
       <p class="pub-footnote"><a href="{{ '/experience/' | relative_url }}">View full experience →</a></p>
     </section>
   </div>
